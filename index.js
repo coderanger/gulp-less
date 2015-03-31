@@ -42,7 +42,7 @@ module.exports = function (options) {
       if (res.sourcemap) {
         res.sourcemap.file = file.path;
         res.sourcemap.sources = res.sourcemap.sources.map(function(sourcePath) {
-          return path.relative(file.base, sourceFile);
+          return path.relative(file.base, sourcePath);
         });
         applySourceMap(file, res.sourcemap);
       }
